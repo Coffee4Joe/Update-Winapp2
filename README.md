@@ -1,15 +1,17 @@
 # Update-Winapp2
-A Batch file that will check and update Winapp2.ini for ccleaner
+A Batch file that will check and update Winapp2.ini for Ccleaner
+For both portable and installed versions.
 
 How to use:
 
 -Download Update-Winapp2.bat
 
--Place in your "C:\Program Files\CCleaner" folder
+-Place Update-Winapp2.bat into the folder that contain ccleaner.exe
 
--Right Click Update-Winapp2.bat and Run As administrator
+-Double click the .bat
+
+-UAC will prompt for permission to run
 
 -Follow the prompts 
 
-
-(Only works in Windows 8/8.1 & Windows 10)
+(Works in Windows 8/8.1 & Windows 10)
