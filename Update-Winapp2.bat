@@ -41,7 +41,7 @@ echo Would You Like to Update? (ctrl+c to cancel)
 del oldversion.txt version.txt
 pause 
 del winapp2-old.ini
-ren winapp2.ini" winapp2-old.ini
+ren winapp2.ini winapp2-old.ini
 powershell Invoke-WebRequest http://winapp2.com/winapp2.ini -OutFile winapp2.ini 
 echo winapp2.ini Has Been Updated!
 pause
