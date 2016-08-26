@@ -24,7 +24,7 @@ pushd %~dp0
 echo.CD=%CD%
 echo Checking For Updates!
 findstr " Version:" winapp2.ini > oldversion.txt
-powershell -command $web=New-Object Net.WebClient ; $web.DownloadString('https://raw.githubusercontent.com/MoscaDotTo/Winapp2/master/Winapp2.ini') | find " Version:" > version.txt
+powershell -command $web=New-Object Net.WebClient ; $web.DownloadString('https://raw.githubusercontent.com/MoscaDotTo/Winapp2/master/CCleaner-Winapp2.ini') | find " Version:" > version.txt
 
 fc oldversion.txt version.txt /lb1 /w > nul
 if errorlevel 1 goto :error
@@ -42,6 +42,6 @@ del oldversion.txt version.txt
 pause 
 del winapp2-old.ini
 ren winapp2.ini winapp2-old.ini
-powershell Invoke-WebRequest https://raw.githubusercontent.com/MoscaDotTo/Winapp2/master/Winapp2.ini -OutFile winapp2.ini 
+powershell Invoke-WebRequest https://raw.githubusercontent.com/MoscaDotTo/Winapp2/master/CCleaner-Winapp2.ini -OutFile winapp2.ini 
 echo winapp2.ini Has Been Updated!
 pause
