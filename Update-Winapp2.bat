@@ -27,15 +27,21 @@ findstr " Version:" winapp2.ini > oldversion.txt
 powershell -command $web=New-Object Net.WebClient ; $web.DownloadString('https://raw.githubusercontent.com/MoscaDotTo/Winapp2/master/Winapp2.ini') | find " Version:" > version.txt
 
 fc oldversion.txt version.txt /lb1 /w > nul
-if errorlevel 1 goto :error
+if errorlevel 1 goto :update
 
 :next
 echo No New Updates!
 del oldversion.txt version.txt
+
+CHOICE /C YN /M "Would You Like To Update Anyways?:" 
+IF ERRORLEVEL 2 goto :no
+IF ERRORLEVEL 1 GOTO :update
+
+:no
 pause
 exit
 
-:error
+:update
 echo Update Is Available!
 echo Would You Like to Update? (ctrl+c to cancel)
 del oldversion.txt version.txt
