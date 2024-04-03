@@ -14,4 +14,4 @@ How to use:
 
 -Follow the prompts 
 
-(Works in Windows 8/8.1 & Windows 10)
+(Works in Windows 8/8.1 & Windows 10) probably with 11 too
